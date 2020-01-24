@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
-@RequestMapping("/build-status")
+@RequestMapping("/status")
 @RestController
 public class AWSController {
 

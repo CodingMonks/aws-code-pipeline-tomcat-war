@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Coding Monks - Entered the pre-build phase"
+  build:
+    commands:
+      - echo "Coding Monks - Entered build phase.Clean prepare and package"
+      - mvn clean prepare-package war:exploded
+  post_build:
+    commands:
+      - echo "Coding Monks - Entered the post-build phase. Moving artifact"
+      - mv target/deploy ./
+artifacts:
+  files:
+    - deploy/**/*
